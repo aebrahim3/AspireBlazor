@@ -307,7 +307,6 @@ C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\a3ygkwa5zy-{0}-2
 C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\nezrqnk58p-{0}-muycvpuwrr-muycvpuwrr.gz
 C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\v0zgfp0y55-{0}-87fc7y1x7t-87fc7y1x7t.gz
 C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\yfc7ypekbg-{0}-mlv21k5csn-mlv21k5csn.gz
-C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\m6zvt9kd4v-{0}-lgsgg849hl-lgsgg849hl.gz
 C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\4xtks9mez4-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\g2sfwwfu4g-{0}-fr7q2aak1r-fr7q2aak1r.gz
 C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\qe4grcdy4o-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -559,3 +558,4 @@ C:\Users\User\BCIT\4870\CmsBackend\bin\Debug\net10.0\runtimes\win\lib\net9.0\Mic
 C:\Users\User\BCIT\4870\CmsBackend\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\User\BCIT\4870\CmsBackend\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\User\BCIT\4870\CmsBackend\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\BCIT\4870\CmsBackend\obj\Debug\net10.0\compressed\m6zvt9kd4v-{0}-cc1k3k91bj-cc1k3k91bj.gz

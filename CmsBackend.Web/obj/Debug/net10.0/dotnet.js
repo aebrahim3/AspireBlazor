@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "CmsBackend.Web",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-MrYSqHXh1HMajOmc+b6FxOE7zvma+cIB/ZPUtJzp38Q=",
+    "hash": "sha256-e2rBLYYUBtG1U/wRZa6+ZsEFufAEA5VdWP83QTKpxMs=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.ykrnppwhq2.js"
@@ -1266,16 +1266,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "CmsBackend.Web.wasm",
-        "name": "CmsBackend.Web.wi4m3k9tk8.wasm",
-        "integrity": "sha256-mLyFu8h6+AKx0BtOoSSPoKYgOBkpP6zrlFEGK9brlBA=",
+        "name": "CmsBackend.Web.3w5zdzdtg8.wasm",
+        "integrity": "sha256-k7GrUsxBmlZyVmRsvjCJDGmpEiYE2kUdQp7GvnN8bN0=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "CmsBackend.Web.pdb",
-        "name": "CmsBackend.Web.qqrewolvtz.pdb",
-        "integrity": "sha256-8hMNz+26BNdYGrp4EqURH6LPqvamfEg0zovmn9j70Pg=",
+        "name": "CmsBackend.Web.ie53kp404z.pdb",
+        "integrity": "sha256-5uk2cHqlxJ7z1C1h9EqjQZ2SJoqm3U6aAK8jXmgzlYg=",
         "cache": "force-cache"
       }
     ],
