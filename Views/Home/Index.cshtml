@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="admin-hero">
+    <!--Admin Card-->
+    <div class="admin-hero-card">
+        <div class="admin-hero-top">
+            <div>
+                <h1 class="admin-title">Mini-CMS Admin</h1>
+                <p class="admin-subtitle">
+                    Manage articles, verify the database is working, and use this panel to confirm backend routes.
+                </p>
+            </div>
+
+            <span class="admin-pill">Backend</span>
+        </div>
+
+        <div class="admin-actions">
+            <a class="btn btn-primary" asp-controller="AdminArticles" asp-action="Index">Manage Articles</a>
+            <a class="btn btn-outline-primary" asp-controller="AdminArticles" asp-action="Create">Create Article</a>
+        </div>
+    </div>
+    <!--Quick Links-->
+    <div class="admin-grid--single">
+        <div class="admin-card admin-card--wide">
+            <div class="admin-card-head">
+                <h2 class="admin-card-title">Quick Links</h2>
+                <p class="admin-card-muted">Shortcuts to common admin pages.</p>
+            </div>
+
+            <div class="admin-links">
+                <a class="admin-link" asp-area="" asp-controller="AdminArticles" asp-action="Index">
+                    <span class="admin-link-icon">A</span>
+                    <span class="admin-link-text">
+                        <span class="admin-link-title">Articles</span>
+                        <span class="admin-link-sub">View / edit posts</span>
+                    </span>
+                    <span class="admin-link-arrow">→</span>
+                </a>
+
+                <a class="admin-link" asp-area="" asp-controller="AdminArticles" asp-action="Create">
+                    <span class="admin-link-icon">+</span>
+                    <span class="admin-link-text">
+                        <span class="admin-link-title">Create</span>
+                        <span class="admin-link-sub">New article</span>
+                    </span>
+                    <span class="admin-link-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

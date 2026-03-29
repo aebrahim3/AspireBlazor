@@ -1,0 +1,310 @@
+/*
+  Mini-CMS Backend (ASP.NET MVC) styling
+  Clean "admin" feel, lightly aligned with the frontend palette.
+  Uses Bootstrap markup already in the scaffolded views.
+*/
+
+:root {
+  --brand-pink: #bcadfb;
+  --brand-cream: #FFFCF9;
+  --brand-aqua: #B1EDE8;
+
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --card: #ffffff;
+  --bg: #F8FAFC;
+
+  --ring: rgba(177, 237, 232, 0.55);
+  --primary-soft: rgba(188, 173, 251, 0.18);
+  --aqua-soft: rgba(177, 237, 232, 0.22);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 80px;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+/* Bootstrap focus ring cleanup */
+.btn:focus,
+.btn:active:focus,
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.25rem var(--ring) !important;
+  border-color: var(--brand-pink) !important;
+}
+
+/* Top nav */
+.app-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-link {
+  color: var(--muted) !important;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--text) !important;
+}
+
+.nav-link.active {
+  color: var(--brand-pink) !important;
+}
+
+/* Main shell */
+.admin-shell {
+  max-width: 1100px;
+}
+
+/* ---------- Dashboard Hero ---------- */
+.admin-hero {
+  margin-top: 1.25rem;
+}
+
+.admin-hero-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 1.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 180px at 10% 0%, rgba(188, 173, 251, 0.22), transparent 60%),
+    radial-gradient(700px 160px at 95% 10%, rgba(177, 237, 232, 0.20), transparent 55%);
+  pointer-events: none;
+  /* IMPORTANT so it never blocks clicks */
+}
+
+.admin-hero-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.admin-title {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 3.6vw, 3.2rem);
+}
+
+.admin-subtitle {
+  margin: .55rem 0 0;
+  color: var(--muted);
+  max-width: 70ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.admin-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: .35rem .75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(188, 173, 251, 0.45);
+  background: var(--primary-soft);
+  color: var(--text);
+  font-size: .85rem;
+  font-weight: 800;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1rem;
+}
+
+/* ---------- ONE-COLUMN big Quick Links ---------- */
+.admin-grid--single {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+/* Make the card fill the “notes” space */
+.admin-card--wide {
+  width: min(1070px, 100%);
+}
+
+.admin-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-card-head {
+  padding: 1.15rem 1.25rem 0.95rem;
+  background:
+    radial-gradient(900px 180px at 10% 0%, rgba(188, 173, 251, 0.16), transparent 60%),
+    radial-gradient(700px 160px at 95% 10%, rgba(177, 237, 232, 0.16), transparent 55%),
+    var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-card-title {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 1.55rem;
+}
+
+.admin-card-muted {
+  margin: .35rem 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+/* Quick links list inside card */
+.admin-links {
+  padding: 1.15rem 1.25rem 1.25rem;
+  display: grid;
+  gap: .9rem;
+}
+
+.admin-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 1.15rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  /* ensure clickable above everything */
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.admin-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+  border-color: rgba(188, 173, 251, 0.55);
+}
+
+.admin-link-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  background: var(--aqua-soft);
+  border: 1px solid rgba(177, 237, 232, 0.55);
+  flex: 0 0 auto;
+}
+
+.admin-link-text {
+  display: grid;
+  gap: 0.2rem;
+  line-height: 1.15;
+}
+
+.admin-link-title {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 1.1rem;
+}
+
+.admin-link-sub {
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.admin-link-arrow {
+  margin-left: auto;
+  font-weight: 900;
+  opacity: .8;
+  font-size: 1.25rem;
+}
+
+/* Buttons (override Bootstrap palette a bit) */
+.btn-primary {
+  background-color: var(--brand-pink) !important;
+  border-color: var(--brand-pink) !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.96);
+}
+
+.btn-outline-primary {
+  border-color: rgba(188, 173, 251, 0.6) !important;
+  color: var(--text) !important;
+  font-weight: 700;
+  background: #fff !important;
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary-soft) !important;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+  border-color: var(--border);
+  border-radius: 0.9rem;
+}
+
+/* Tables */
+.table {
+  border-color: var(--border) !important;
+}
+
+.table thead th {
+  color: var(--muted);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.table tbody tr {
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background: rgba(188, 173, 251, 0.06);
+}

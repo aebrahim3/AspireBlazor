@@ -1,0 +1,145 @@
+@{
+    ViewData["Title"] = "Page Not Found";
+}
+
+<style>
+    .notfound-wrap {
+        min-height: calc(100vh - 6rem);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding-top: 5rem;
+    }
+
+    .notfound-404 {
+        z-index: 0;
+        font-size: 16rem;
+        font-weight: 800;
+        line-height: 1;
+        user-select: none;
+        position: absolute;
+        top: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(188, 173, 251, 0.4);
+        pointer-events: none;
+    }
+
+    .notfound-scene {
+        z-index: 20;
+        position: relative;
+        width: 100%;
+        max-width: 48rem;
+        margin-top: -3rem;
+        display: flex;
+        justify-content: center;
+        padding: 0 1rem;
+        pointer-events: none;
+    }
+
+    .notfound-mountains {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+
+    .notfound-penguin {
+        position: absolute;
+        bottom: -0.625rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6rem;
+        z-index: 20;
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+    }
+
+    .notfound-text {
+        z-index: 20;
+        position: relative;
+        text-align: center;
+        padding: 0 1.5rem 4rem;
+        margin-top: 3rem;
+    }
+
+    .notfound-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text);
+        letter-spacing: -0.025em;
+        margin: 0;
+    }
+
+    .notfound-desc {
+        margin-top: 1rem;
+        font-size: 1.125rem;
+        color: var(--muted);
+        max-width: 28rem;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+    }
+
+    .notfound-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        padding: 0.75rem 2rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #fff;
+        background: var(--brand-pink);
+        border-radius: 0.75rem;
+        text-decoration: none;
+        box-shadow: 0 10px 25px rgba(188, 173, 251, 0.20);
+        transition: filter 0.15s ease, transform 0.15s ease;
+    }
+
+    .notfound-btn:hover {
+        filter: brightness(0.95);
+        transform: translateY(-1px);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @@media (min-width: 768px) {
+        .notfound-404 {
+            font-size: 16rem;
+        }
+        .notfound-scene {
+            margin-top: -7rem;
+        }
+        .notfound-penguin {
+            width: 8rem;
+        }
+        .notfound-heading {
+            font-size: 2.5rem;
+        }
+        .notfound-text {
+            margin-top: 6rem;
+        }
+    }
+</style>
+
+<div class="notfound-wrap">
+    <h1 class="notfound-404">404</h1>
+
+    <div class="notfound-scene">
+        <img class="notfound-mountains" src="~/images/mountains.png" alt="Mountains" />
+        <img class="notfound-penguin" src="~/images/penguin.png" alt="Penguin" />
+    </div>
+
+    <div class="notfound-text">
+        <h2 class="notfound-heading">Page Not Found</h2>
+        <p class="notfound-desc">
+            Oops! The page you are looking for might have been removed, had its
+            name changed, or is temporarily unavailable.
+        </p>
+        <a class="notfound-btn" asp-controller="Home" asp-action="Index">
+            Back to Home
+        </a>
+    </div>
+</div>

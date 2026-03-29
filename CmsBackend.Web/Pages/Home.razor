@@ -1,0 +1,222 @@
+﻿@page "/"
+@inject HttpClient Http
+
+<div class="cms-root">
+    <header class="cms-header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <span class="brand-dot"></span>
+                <span class="brand-name">Article Stream</span>
+            </div>
+            <p class="header-tagline">Latest published articles</p>
+        </div>
+    </header>
+
+    <main class="cms-main">
+        @if (articles == null)
+        {
+            <div class="loading-state">
+                <div class="loading-bar"></div>
+                <p>Fetching articles...</p>
+            </div>
+        }
+        else if (articles.Length == 0)
+        {
+            <p class="empty-state">No articles published yet.</p>
+        }
+        else
+        {
+            <div class="article-list">
+                @for (int i = 0; i < articles.Length; i++)
+                {
+                    var article = articles[i];
+                    var index = i;
+                    <article class="article-card" style="animation-delay: @(index * 80)ms">
+                        <div class="article-index">@((index + 1).ToString("D2"))</div>
+                        <div class="article-body">
+                            <h2 class="article-title">@article.Title</h2>
+                            <div class="article-meta">
+                                <span class="meta-author">@article.AuthorName</span>
+                                <span class="meta-sep">·</span>
+                                <span class="meta-date">@article.CreatedAtUtc.ToLocalTime().ToString("MMM dd, yyyy")</span>
+                            </div>
+                            <div class="article-content">@((MarkupString)article.ContentHtml)</div>
+                        </div>
+                    </article>
+                }
+            </div>
+        }
+    </main>
+</div>
+
+<style>
+    @@keyframes fadeUp {
+        from { opacity: 0; transform: translateY(16px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @@keyframes loadBar {
+        0% { width: 0%; }
+        100% { width: 100%; }
+    }
+
+    body {
+    margin: 0;
+    background: #0f0f1a;
+    font-family: 'Georgia', serif;
+    color: #e8e6e0;
+}
+
+    .cms-root {
+        min-height: 100vh;
+    }
+
+    .cms-header {
+        background: linear-gradient(180deg, #0d1b3e 0%, #1a0a3e 100%);
+        color: #f7f6f2;
+        padding: 2.5rem 3rem;
+        border-bottom: 3px solid #c8a96e;
+    }
+
+    .header-inner {
+        max-width: 860px;
+        margin: 0 auto;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .header-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .brand-dot {
+        width: 10px;
+        height: 10px;
+        background: #c8a96e;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .brand-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    .header-tagline {
+        margin: 0;
+        font-size: 0.85rem;
+        color: #888;
+        font-style: italic;
+    }
+
+    .cms-main {
+        max-width: 860px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+    }
+
+    .loading-state {
+        text-align: center;
+        color: #888;
+        font-style: italic;
+    }
+
+    .loading-bar {
+        height: 2px;
+        background: #c8a96e;
+        animation: loadBar 1.5s ease infinite;
+        margin-bottom: 1rem;
+    }
+
+    .empty-state {
+        text-align: center;
+        color: #888;
+        font-style: italic;
+    }
+
+    .article-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .article-card {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem 0;
+        border-bottom: 1px solid #2a2a3e;
+        opacity: 0;
+        animation: fadeUp 0.5s ease forwards;
+    }
+
+    .article-card:first-child {
+        border-top: 1px solid #2a2a3e;
+    }
+
+    .article-index {
+        font-size: 0.75rem;
+        color: #c8a96e;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        padding-top: 0.3rem;
+        min-width: 2rem;
+    }
+
+    .article-body {
+        flex: 1;
+    }
+
+    .article-title {
+        margin: 0 0 0.4rem 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 1.3;
+        color: #e8e6e0;
+    }
+
+    .article-meta {
+        font-size: 0.8rem;
+        color: #888;
+        margin-bottom: 0.8rem;
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        font-family: 'Courier New', monospace;
+    }
+
+    .meta-author {
+        color: #c8a96e;
+        font-weight: bold;
+    }
+
+    .article-content {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #aaa;
+    }
+</style>
+
+@code {
+    private Article[]? articles;
+
+    protected override async Task OnInitializedAsync()
+    {
+        articles = await Http.GetFromJsonAsync<Article[]>("api/articles");
+    }
+
+    public class Article
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = "";
+        public string ContentHtml { get; set; } = "";
+        public string AuthorName { get; set; } = "";
+        public DateTime CreatedAtUtc { get; set; }
+    }
+}
+    
+

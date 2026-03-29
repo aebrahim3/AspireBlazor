@@ -1,0 +1,13 @@
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\bin\Debug\net10.0\CmsBackend.ServiceDefaults.deps.json
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\bin\Debug\net10.0\CmsBackend.ServiceDefaults.dll
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\bin\Debug\net10.0\CmsBackend.ServiceDefaults.pdb
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\CmsBackend.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\CmsBackend.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\CmsBackend.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\CmsBackend.ServiceDefaults.AssemblyInfo.cs
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\CmsBackend.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\CmsBackend.ServiceDefaults.sourcelink.json
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\CmsBackend.ServiceDefaults.dll
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\refint\CmsBackend.ServiceDefaults.dll
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\CmsBackend.ServiceDefaults.pdb
+C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.ServiceDefaults\obj\Debug\net10.0\ref\CmsBackend.ServiceDefaults.dll
