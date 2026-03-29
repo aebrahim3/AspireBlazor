@@ -13,7 +13,7 @@
 
             <form method="post" asp-action="Edit" asp-controller="AdminArticles" asp-route-id="@Model.Id">
                 <input type="hidden" asp-for="Id" />
-                <input type="hidden" asp-for="AuthorName" />
+                <input type="hidden" asp-for="Author.UserName" />
                 <input type="hidden" asp-for="CreatedAtUtc" />
 
                 <div class="form-group mb-3">
@@ -44,49 +44,51 @@
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var quill = new Quill('#editor-container', {
-            theme: 'snow',
-            placeholder: 'Write your article content here...',
-            modules: {
-                toolbar: [
-                    [{ 'header': [1, 2, 3, false] }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                    ['link', 'image', 'clean']
-                ]
-            }
-        });
+    document.addEventListener('DOMContentLoaded', function () {
+    var quill = new Quill('#editor-container', {
+    theme: 'snow',
+    placeholder: 'Write your article content here...',
+    modules: {
+    toolbar: [
+    [{ 'header': [1, 2, 3, false] }],
+    ['bold', 'italic', 'underline', 'strike'],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+    ['link', 'image', 'clean']
+    ]
+    }
+    });
 
-        var hiddenInput = document.getElementById('hiddenContentHtml');
+    var hiddenInput = document.getElementById('hiddenContentHtml');
 
-        // 1. Load existing content from the hidden input into Quill
-        if (hiddenInput.value) {
-            quill.root.innerHTML = hiddenInput.value;
-        }
+    // 1. Load existing content from the hidden input into Quill
+    if (hiddenInput.value) {
+    quill.root.innerHTML = hiddenInput.value;
+    }
 
-        // 2. Sync Quill to hidden input on every change for validation
-        quill.on('text-change', function() {
-            var html = quill.root.innerHTML;
-            if (html === '<p><br></p>') {
-                hiddenInput.value = "";
-            } else {
-                hiddenInput.value = html;
-            }
-        });
+    // 2. Sync Quill to hidden input on every change for validation
+    quill.on('text-change', function () {
+    var html = quill.root.innerHTML;
+    if (html === '<p><br></p>') {
+    hiddenInput.value = "";
+    } else {
+    hiddenInput.value = html;
+    }
+    });
 
-        // 3. Final safety check on submission
-        document.querySelector('form').addEventListener('submit', function (e) {
-            var content = quill.root.innerHTML;
-            if (!content || content === '<p><br></p>') {
-                e.preventDefault();
-                alert('Please enter some content before saving.');
-                return false;
-            }
-        });
+    // 3. Final safety check on submission
+    document.querySelector('form').addEventListener('submit', function (e) {
+    var content = quill.root.innerHTML;
+    if (!content || content === '<p><br></p>') {
+    e.preventDefault();
+    alert('Please enter some content before saving.');
+    return false;
+    }
+    });
     });
 </script>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

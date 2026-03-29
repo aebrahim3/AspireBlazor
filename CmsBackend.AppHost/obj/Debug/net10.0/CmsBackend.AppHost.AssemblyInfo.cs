@@ -23,7 +23,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CmsBackend.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+536c6f4e799344e617190aa98329fd908f5c6119")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67568866f10586c0f57de69049f3a3c6051ee8a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("CmsBackend.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CmsBackend.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

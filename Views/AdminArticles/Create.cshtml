@@ -12,7 +12,7 @@
             <hr />
 
             <form method="post" asp-action="Create" asp-controller="AdminArticles">
-                <input type="hidden" asp-for="AuthorName" value="admin" />
+                <input type="hidden" asp-for="Author.UserName" value="admin" />
                 
                 <div class="form-group mb-3">
                     <label asp-for="Title" class="form-label">Article Title</label>
@@ -41,36 +41,38 @@
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var quill = new Quill('#editor-container', {
-            theme: 'snow',
-            placeholder: 'Write your article content here...',
-            modules: {
-                toolbar: [
-                    [{ 'header': [1, 2, 3, false] }],
-                    ['bold', 'italic', 'underline'],
-                    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                    ['link', 'image', 'clean']
-                ]
-            }
-        });
+    document.addEventListener('DOMContentLoaded', function () {
+    var quill = new Quill('#editor-container', {
+    theme: 'snow',
+    placeholder: 'Write your article content here...',
+    modules: {
+    toolbar: [
+    [{ 'header': [1, 2, 3, false] }],
+    ['bold', 'italic', 'underline'],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+    ['link', 'image', 'clean']
+    ]
+    }
+    });
 
-        var hiddenInput = document.getElementById('hiddenContentHtml');
+    var hiddenInput = document.getElementById('hiddenContentHtml');
 
-        // Sync Quill to the hidden input on every change
-        quill.on('text-change', function() {
-            var html = quill.root.innerHTML;
-            // If Quill only contains the default empty tags, set it to empty
-            // so the [Required] validation triggers correctly.
-            if (html === '<p><br></p>') {
-                hiddenInput.value = "";
-            } else {
-                hiddenInput.value = html;
-            }
-        });
+    // Sync Quill to the hidden input on every change
+    quill.on('text-change', function () {
+    var html = quill.root.innerHTML;
+    // If Quill only contains the default empty tags, set it to empty
+    // so the [Required] validation triggers correctly.
+    if (html === '<p><br></p>') {
+    hiddenInput.value = "";
+    } else {
+    hiddenInput.value = html;
+    }
+    });
     });
 </script>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

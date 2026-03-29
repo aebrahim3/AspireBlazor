@@ -57,7 +57,7 @@ public class ArticlesApiController : ControllerBase
         a.Title = input.Title;
         // Sanitize HTML to prevent XSS attacks.
         a.ContentHtml = _sanitizer.Sanitize(input.ContentHtml);
-        a.AuthorName = input.AuthorName;
+        a.AuthorId = input.AuthorId;
         a.UpdatedAtUtc = DateTime.UtcNow;
 
         await _db.SaveChangesAsync();

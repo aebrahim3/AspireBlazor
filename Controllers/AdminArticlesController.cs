@@ -1,6 +1,7 @@
 using CmsBackend.Data;
 using CmsBackend.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,8 +13,13 @@ namespace CmsBackend.Controllers;
 public class AdminArticlesController : Controller
 {
     private readonly ApplicationDbContext _db;
+    private readonly UserManager<IdentityUser> _userManager;
 
-    public AdminArticlesController(ApplicationDbContext db) => _db = db;
+    public AdminArticlesController(ApplicationDbContext db, UserManager<IdentityUser> userManager)
+    {
+        _db = db;
+        _userManager = userManager;
+    }
 
     // Fetch and display all articles sorted by most recent first.
     [HttpGet("")]
@@ -27,9 +33,9 @@ public class AdminArticlesController : Controller
         }
         else if (User.IsInRole("Writer"))
         {
-            var userName = User.Identity?.Name;
+            var userId = _userManager.GetUserId(User);
             articles = await _db.Articles
-                .Where(a => a.AuthorName == userName)
+                .Where(a => a.AuthorId == userId)
                 .OrderByDescending(a => a.CreatedAtUtc)
                 .ToListAsync();
             return View(articles);
@@ -61,7 +67,7 @@ public class AdminArticlesController : Controller
         article.Id = 0;
         article.CreatedAtUtc = DateTime.UtcNow;
         article.UpdatedAtUtc = DateTime.UtcNow;
-        article.AuthorName = User.Identity?.Name ?? "Unknown";
+        article.AuthorId = _userManager.GetUserId(User) ?? "";
 
         _db.Articles.Add(article);
         await _db.SaveChangesAsync();

@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace CmsBackend.Models;
 
@@ -12,8 +14,11 @@ public class Article
     [Required]
     public string ContentHtml { get; set; } = "";
 
-    [MaxLength(100)]
-    public string AuthorName { get; set; } = "admin";
+    [Required]
+    public string AuthorId { get; set; } = "";
+
+    [ForeignKey(nameof(AuthorId))]
+    public IdentityUser? Author { get; set; }
 
     public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAtUtc { get; set; } = DateTime.UtcNow;
