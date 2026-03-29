@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CmsBackend.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a28b14c75c878cb8e92f24e3349e0e9699fb73b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+536c6f4e799344e617190aa98329fd908f5c6119")]
 [assembly: System.Reflection.AssemblyProductAttribute("CmsBackend.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CmsBackend.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

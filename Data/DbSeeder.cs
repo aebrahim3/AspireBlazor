@@ -69,37 +69,37 @@ public static class DbSeeder
                 new Article
                 {
                     Title = "Welcome",
-                    ContentHtml = "<p>Seeded article 1.</p>",
+                    ContentHtml = "<p>I hope you will enjoy your experience with Article Stream! Here we critique literary works, such as novels, plays, and poems. The goal is to create a space to regularly exercise critical thought, which is becoming more and more scarce in the AI-dominated era. </p>",
                     AuthorName = "admin",
                 },
                 new Article
                 {
-                    Title = "About",
-                    ContentHtml = "<p>Seeded article 2.</p>",
+                    Title = "Alas!",
+                    ContentHtml = "<p>Just a personal thought, but I thought Brothers Karamazov had a rushed ending.</p>",
                     AuthorName = "writer",
                 },
                 new Article
                 {
-                    Title = "FAQ",
-                    ContentHtml = "<p>Seeded article 3.</p>",
+                    Title = "Reiteration",
+                    ContentHtml = "<p>Brothers Karamazov is a great book! But, the writer thought the ending did not do justice to the rest of the story. </p>",
                     AuthorName = "admin",
                 },
                 new Article
                 {
-                    Title = "News",
-                    ContentHtml = "<p>Seeded article 4.</p>",
+                    Title = "Is Shakespeare overrated?",
+                    ContentHtml = "<p>While some people assert that Shakespeare does not deserve the praise that he garnered for the past 450 years, I believe that for his time, he was revolutionary in terms of his character depth and eloquence. Even though writers have progressively made their characters even more complex and human, Shakespeare was probably the inspiration for most, if not all, those efforts. </p>",
                     AuthorName = "writer",
                 },
                 new Article
                 {
                     Title = "Getting Started",
-                    ContentHtml = "<p>Seeded article 5.</p>",
+                    ContentHtml = "<p>If you're new here, please consider becoming a writer and contributing to this growing platform. To register, please navigate to Contact. </p>",
                     AuthorName = "admin",
                 },
                 new Article
                 {
                     Title = "Contact",
-                    ContentHtml = "<p>Seeded article 6.</p>",
+                    ContentHtml = "<p>My email is a@a.a. Please reach out to me if you have any interest in becoming a writer here. </p>",
                     AuthorName = "admin",
                 }
             );
