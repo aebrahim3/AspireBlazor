@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace CmsBackend.Migrations
+namespace AspireBlazor.Migrations
 {
     /// <inheritdoc />
     public partial class AddAuthorForeignKey : Migration

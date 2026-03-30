@@ -1,11 +1,11 @@
-using CmsBackend.Data;
-using CmsBackend.Models;
+using AspireBlazor.Data;
+using AspireBlazor.Models;
 using Ganss.Xss;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace CmsBackend.Controllers;
+namespace AspireBlazor.Controllers;
 
 // Provides REST API endpoints for article CRUD operations with HTML sanitization.
 [ApiController]

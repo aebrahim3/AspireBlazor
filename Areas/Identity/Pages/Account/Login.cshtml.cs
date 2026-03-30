@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace CmsBackend.Areas.Identity.Pages.Account
+namespace AspireBlazor.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {

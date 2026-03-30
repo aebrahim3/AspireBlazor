@@ -1,4 +1,4 @@
-@model CmsBackend.Models.Article
+@model AspireBlazor.Models.Article
 
 @{
     ViewData["Title"] = "Edit Article";
@@ -50,44 +50,50 @@
 
 <style>
     .ai-issue {
-        background: #fff3cd;
-        border-left: 4px solid #ffc107;
-        padding: 10px 14px;
-        margin-bottom: 8px;
-        border-radius: 4px;
-        font-size: 0.9rem;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
     }
+
     .ai-issue .bad-text {
-        color: #dc3545;
-        font-weight: 600;
+    color: #dc3545;
+    font-weight: 600;
     }
+
     .ai-issue .suggestion {
-        color: #198754;
-        font-weight: 600;
-        cursor: pointer;
-        text-decoration: underline;
+    color: #198754;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
     }
+
     .ai-issue .suggestion:hover {
-        color: #0d6e3d;
+    color: #0d6e3d;
     }
+
     .ai-success {
-        background: #d1e7dd;
-        border-left: 4px solid #198754;
-        padding: 10px 14px;
-        border-radius: 4px;
-        color: #0f5132;
-        font-size: 0.9rem;
+    background: #d1e7dd;
+    border-left: 4px solid #198754;
+    padding: 10px 14px;
+    border-radius: 4px;
+    color: #0f5132;
+    font-size: 0.9rem;
     }
+
     .ai-error {
-        background: #f8d7da;
-        border-left: 4px solid #dc3545;
-        padding: 10px 14px;
-        border-radius: 4px;
-        color: #842029;
-        font-size: 0.9rem;
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    padding: 10px 14px;
+    border-radius: 4px;
+    color: #842029;
+    font-size: 0.9rem;
     }
+
     #aiCheckBtn:disabled {
-        opacity: 0.6;
+    opacity: 0.6;
     }
 </style>
 
@@ -95,126 +101,126 @@
     var quill;
 
     document.addEventListener('DOMContentLoaded', function () {
-        quill = new Quill('#editor-container', {
-            theme: 'snow',
-            placeholder: 'Write your article content here...',
-            modules: {
-                toolbar: [
-                    [{ 'header': [1, 2, 3, false] }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                    ['link', 'image', 'clean']
-                ]
-            }
-        });
+    quill = new Quill('#editor-container', {
+    theme: 'snow',
+    placeholder: 'Write your article content here...',
+    modules: {
+    toolbar: [
+    [{ 'header': [1, 2, 3, false] }],
+    ['bold', 'italic', 'underline', 'strike'],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+    ['link', 'image', 'clean']
+    ]
+    }
+    });
 
-        var hiddenInput = document.getElementById('hiddenContentHtml');
+    var hiddenInput = document.getElementById('hiddenContentHtml');
 
-        // 1. Load existing content from the hidden input into Quill
-        if (hiddenInput.value) {
-            quill.root.innerHTML = hiddenInput.value;
-        }
+    // 1. Load existing content from the hidden input into Quill
+    if (hiddenInput.value) {
+    quill.root.innerHTML = hiddenInput.value;
+    }
 
-        // 2. Sync Quill to hidden input on every change for validation
-        quill.on('text-change', function () {
-            var html = quill.root.innerHTML;
-            if (html === '<p><br></p>') {
-                hiddenInput.value = "";
-            } else {
-                hiddenInput.value = html;
-            }
-        });
+    // 2. Sync Quill to hidden input on every change for validation
+    quill.on('text-change', function () {
+    var html = quill.root.innerHTML;
+    if (html === '<p><br></p>') {
+    hiddenInput.value = "";
+    } else {
+    hiddenInput.value = html;
+    }
+    });
 
-        // 3. Final safety check on submission
-        document.querySelector('form').addEventListener('submit', function (e) {
-            var content = quill.root.innerHTML;
-            if (!content || content === '<p><br></p>') {
-                e.preventDefault();
-                alert('Please enter some content before saving.');
-                return false;
-            }
-        });
+    // 3. Final safety check on submission
+    document.querySelector('form').addEventListener('submit', function (e) {
+    var content = quill.root.innerHTML;
+    if (!content || content === '<p><br></p>') {
+    e.preventDefault();
+    alert('Please enter some content before saving.');
+    return false;
+    }
+    });
     });
 
     // Sends article content to the AI grammar check endpoint and displays results.
     async function runAiCheck() {
-        var btn = document.getElementById('aiCheckBtn');
-        var resultsDiv = document.getElementById('aiResults');
-        var html = quill.root.innerHTML;
+    var btn = document.getElementById('aiCheckBtn');
+    var resultsDiv = document.getElementById('aiResults');
+    var html = quill.root.innerHTML;
 
-        if (!html || html === '<p><br></p>') {
-            resultsDiv.style.display = 'block';
-            resultsDiv.innerHTML = '<div class="ai-error">Please write some content before running the AI check.</div>';
-            return;
-        }
+    if (!html || html === '<p><br></p>') {
+    resultsDiv.style.display = 'block';
+    resultsDiv.innerHTML = '<div class="ai-error">Please write some content before running the AI check.</div>';
+    return;
+    }
 
-        btn.disabled = true;
-        btn.innerHTML = '&#x23F3; Checking...';
-        resultsDiv.style.display = 'block';
-        resultsDiv.innerHTML = '<div style="color:#666;">Analyzing your text for grammar and spelling issues...</div>';
+    btn.disabled = true;
+    btn.innerHTML = '&#x23F3; Checking...';
+    resultsDiv.style.display = 'block';
+    resultsDiv.innerHTML = '<div style="color:#666;">Analyzing your text for grammar and spelling issues...</div>';
 
-        try {
-            var response = await fetch('/api/ai/check', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ text: html, language: 'en-US' })
-            });
+    try {
+    var response = await fetch('/api/ai/check', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text: html, language: 'en-US' })
+    });
 
-            if (!response.ok) {
-                throw new Error('Service returned ' + response.status);
-            }
+    if (!response.ok) {
+    throw new Error('Service returned ' + response.status);
+    }
 
-            var issues = await response.json();
+    var issues = await response.json();
 
-            if (issues.length === 0) {
-                resultsDiv.innerHTML = '<div class="ai-success">&#x2705; No grammar or spelling issues found. Your text looks great!</div>';
-            } else {
-                var output = '<p class="mb-2"><strong>Found ' + issues.length + ' issue(s):</strong></p>';
-                issues.forEach(function (issue, idx) {
-                    output += '<div class="ai-issue">';
-                    output += '<strong>' + (idx + 1) + '.</strong> ' + escapeHtml(issue.message) + '<br>';
-                    if (issue.badText) {
-                        output += 'Problem: <span class="bad-text">"' + escapeHtml(issue.badText) + '"</span>';
-                    }
-                    if (issue.suggestions && issue.suggestions.length > 0) {
-                        output += ' &rarr; Suggestions: ';
-                        issue.suggestions.forEach(function (s, i) {
-                            output += '<span class="suggestion" onclick="applySuggestion(\'' +
-                                escapeJs(issue.badText) + '\', \'' + escapeJs(s) + '\')">' +
-                                escapeHtml(s) + '</span>';
-                            if (i < issue.suggestions.length - 1) output += ', ';
-                        });
-                    }
-                    output += '</div>';
-                });
-                resultsDiv.innerHTML = output;
-            }
-        } catch (err) {
-            resultsDiv.innerHTML = '<div class="ai-error">&#x26A0; Could not complete grammar check: ' + escapeHtml(err.message) + '</div>';
-        }
+    if (issues.length === 0) {
+    resultsDiv.innerHTML = '<div class="ai-success">&#x2705; No grammar or spelling issues found. Your text looks great!</div>';
+    } else {
+    var output = '<p class="mb-2"><strong>Found ' + issues.length + ' issue(s):</strong></p>';
+    issues.forEach(function (issue, idx) {
+    output += '<div class="ai-issue">';
+    output += '<strong>' + (idx + 1) + '.</strong> ' + escapeHtml(issue.message) + '<br>';
+    if (issue.badText) {
+    output += 'Problem: <span class="bad-text">"' + escapeHtml(issue.badText) + '"</span>';
+    }
+    if (issue.suggestions && issue.suggestions.length > 0) {
+    output += ' &rarr; Suggestions: ';
+    issue.suggestions.forEach(function (s, i) {
+    output += '<span class="suggestion" onclick="applySuggestion(\'' +
+    escapeJs(issue.badText) + '\', \'' + escapeJs(s) + '\')">' +
+    escapeHtml(s) + '</span>';
+    if (i < issue.suggestions.length - 1) output += ', ';
+    });
+    }
+    output += '</div>';
+    });
+    resultsDiv.innerHTML = output;
+    }
+    } catch (err) {
+    resultsDiv.innerHTML = '<div class="ai-error">&#x26A0; Could not complete grammar check: ' + escapeHtml(err.message) + '</div>';
+    }
 
-        btn.disabled = false;
-        btn.innerHTML = '&#x1F9E0; AI Grammar &amp; Spell Check';
+    btn.disabled = false;
+    btn.innerHTML = '&#x1F9E0; AI Grammar &amp; Spell Check';
     }
 
     // Replaces the first occurrence of bad text with the suggested correction in the editor.
     function applySuggestion(badText, suggestion) {
-        var content = quill.getText();
-        var index = content.indexOf(badText);
-        if (index !== -1) {
-            quill.deleteText(index, badText.length);
-            quill.insertText(index, suggestion);
-        }
+    var content = quill.getText();
+    var index = content.indexOf(badText);
+    if (index !== -1) {
+    quill.deleteText(index, badText.length);
+    quill.insertText(index, suggestion);
+    }
     }
 
     function escapeHtml(str) {
-        var div = document.createElement('div');
-        div.appendChild(document.createTextNode(str || ''));
-        return div.innerHTML;
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str || ''));
+    return div.innerHTML;
     }
 
     function escapeJs(str) {
-        return (str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\"');
+    return (str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '\\"');
     }
 </script>
 

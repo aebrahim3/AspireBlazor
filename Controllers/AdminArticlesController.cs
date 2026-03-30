@@ -1,11 +1,11 @@
-using CmsBackend.Data;
-using CmsBackend.Models;
+using AspireBlazor.Data;
+using AspireBlazor.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace CmsBackend.Controllers;
+namespace AspireBlazor.Controllers;
 
 // Handles admin CRUD operations for articles with role-based authorization.
 [Authorize]

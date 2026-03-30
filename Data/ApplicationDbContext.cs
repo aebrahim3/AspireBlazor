@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace CmsBackend.Data;
+namespace AspireBlazor.Data;
 
-using CmsBackend.Models;
+using AspireBlazor.Models;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
     : IdentityDbContext<IdentityUser, IdentityRole, string>(options)

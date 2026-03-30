@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using CmsBackend.Models;
+using AspireBlazor.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CmsBackend.Controllers;
+namespace AspireBlazor.Controllers;
 
 // Handles home page and error views.
 public class HomeController : Controller

@@ -1,4 +1,4 @@
-using CmsBackend.Data;
+using AspireBlazor.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace CmsBackend.Controllers;
+namespace AspireBlazor.Controllers;
 
 // Provides AI-powered grammar and spell checking using the free LanguageTool API.
 [ApiController]

@@ -1,4 +1,4 @@
-namespace CmsBackend.Models;
+namespace AspireBlazor.Models;
 
 public class ErrorViewModel
 {

@@ -1,7 +1,7 @@
-using CmsBackend.Models;
+using AspireBlazor.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-namespace CmsBackend.Data;
+namespace AspireBlazor.Data;
 
 public static class DbSeeder
 {
@@ -70,6 +70,7 @@ public static class DbSeeder
         var adminEmail = "a@a.a";
         var adminPassword = "P@$$w0rd";
 
+        //Seeds sample articles
         var admin = await userManager.FindByEmailAsync(adminEmail);
         if (admin == null)
         {
@@ -92,7 +93,7 @@ public static class DbSeeder
                 new Article
                 {
                     Title = "Welcome",
-                    ContentHtml = "<p>I hope you will enjoy your experience with Article Stream! Here we critique literary works, such as novels, plays, and poems. The goal is to create a space to regularly exercise critical thought, which is becoming more and more scarce in the AI-dominated era. </p>",
+                    ContentHtml = "<p>I hope you will enjoy your experience with Ink & Pen! Here we critique literary works, such as novels, plays, and poems. The goal is to create a space to regularly exercise critical thought, which is becoming more and more scarce in the AI-dominated era. </p>",
                     AuthorId = admin.Id,
                 },
                 new Article

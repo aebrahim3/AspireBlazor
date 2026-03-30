@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CmsBackend.Migrations
+namespace AspireBlazor.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
