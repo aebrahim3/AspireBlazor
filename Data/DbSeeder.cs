@@ -23,6 +23,7 @@ public static class DbSeeder
             }
         }
 
+        // Create first writer account (w@w.w)
         var writerUserName = "writer";
         var writerEmail = "w@w.w";
         var writerPassword = "P@$$w0rd";
@@ -43,6 +44,28 @@ public static class DbSeeder
             await userManager.AddToRoleAsync(writer, "Writer");
         }
 
+        // Create second writer account (x@x.x) as required by assignment.
+        var writer2UserName = "writer2";
+        var writer2Email = "x@x.x";
+        var writer2Password = "P@$$w0rd";
+
+        var writer2 = await userManager.FindByEmailAsync(writer2Email);
+        if (writer2 == null)
+        {
+            writer2 = new IdentityUser
+            {
+                UserName = writer2UserName,
+                Email = writer2Email,
+                EmailConfirmed = true,
+            };
+            await userManager.CreateAsync(writer2, writer2Password);
+        }
+        if (!await userManager.IsInRoleAsync(writer2, "Writer"))
+        {
+            await userManager.AddToRoleAsync(writer2, "Writer");
+        }
+
+        // Create admin account (a@a.a)
         var adminUserName = "admin";
         var adminEmail = "a@a.a";
         var adminPassword = "P@$$w0rd";

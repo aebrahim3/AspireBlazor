@@ -60,6 +60,11 @@ public class AdminArticlesController : Controller
     [HttpPost("create")]
     public async Task<IActionResult> Create(Article article)
     {
+        // AuthorId and Author are set server-side, so clear their validation errors.
+        ModelState.Remove("AuthorId");
+        ModelState.Remove("Author");
+        ModelState.Remove("Author.UserName");
+
         // Return form if validation fails.
         if (!ModelState.IsValid)
             return View(article);
@@ -94,6 +99,11 @@ public class AdminArticlesController : Controller
         // Verify the ID matches the article being updated.
         if (id != article.Id)
             return BadRequest();
+
+        // AuthorId and Author are not editable, so clear their validation errors.
+        ModelState.Remove("AuthorId");
+        ModelState.Remove("Author");
+        ModelState.Remove("Author.UserName");
 
         // Return form if validation fails.
         if (!ModelState.IsValid)

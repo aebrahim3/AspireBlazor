@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.AppHost\\CmsBackend.AppHost.csproj": {}
+    "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.AppHost/CmsBackend.AppHost.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.AppHost\\CmsBackend.AppHost.csproj": {
+    "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.AppHost/CmsBackend.AppHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.AppHost\\CmsBackend.AppHost.csproj",
+        "projectUniqueName": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.AppHost/CmsBackend.AppHost.csproj",
         "projectName": "CmsBackend.AppHost",
-        "projectPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.AppHost\\CmsBackend.AppHost.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.AppHost\\obj\\",
+        "projectPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.AppHost/CmsBackend.AppHost.csproj",
+        "packagesPath": "/Users/abdullahd08/.nuget/packages/",
+        "outputPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.AppHost/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/abdullahd08/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -38,13 +38,13 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
-            "Aspire.Dashboard.Sdk.win-x64": {
+            "Aspire.Dashboard.Sdk.osx-x64": {
               "target": "Package",
               "version": "[13.2.0, )",
               "autoReferenced": true
@@ -53,7 +53,7 @@
               "target": "Package",
               "version": "[13.2.0, )"
             },
-            "Aspire.Hosting.Orchestration.win-x64": {
+            "Aspire.Hosting.Orchestration.osx-x64": {
               "target": "Package",
               "version": "[13.2.0, )",
               "autoReferenced": true
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

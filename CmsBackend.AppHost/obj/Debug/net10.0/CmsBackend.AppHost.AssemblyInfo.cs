@@ -11,19 +11,19 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("006a6e61-7d01-4149-bb5e-ce804f058995")]
-[assembly: System.Reflection.AssemblyMetadata("dcpclipath", ("C:\\Users\\User\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.2.0\\tools\\d" +
-    "cp.exe"))]
-[assembly: System.Reflection.AssemblyMetadata("dcpextensionpaths", ("C:\\Users\\User\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.2.0\\tools\\e" +
-    "xt\\"))]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.AppHost")]
+[assembly: System.Reflection.AssemblyMetadata("dcpclipath", ("/Users/abdullahd08/.nuget/packages/aspire.hosting.orchestration.osx-x64/13.2.0/to" +
+    "ols/dcp"))]
+[assembly: System.Reflection.AssemblyMetadata("dcpextensionpaths", ("/Users/abdullahd08/.nuget/packages/aspire.hosting.orchestration.osx-x64/13.2.0/to" +
+    "ols/ext/"))]
+[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.AppHost")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "CmsBackend.AppHost.csproj")]
-[assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", ("C:\\Users\\User\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\13.2.0\\tools\\Aspire.Da" +
-    "shboard.exe"))]
-[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.AppHost\\obj\\")]
+[assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", ("/Users/abdullahd08/.nuget/packages/aspire.dashboard.sdk.osx-x64/13.2.0/tools/Aspi" +
+    "re.Dashboard.dll"))]
+[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.AppHost/obj/")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CmsBackend.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67568866f10586c0f57de69049f3a3c6051ee8a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34cc38c3a9c73bfb81a7be52c21790717cc1e621")]
 [assembly: System.Reflection.AssemblyProductAttribute("CmsBackend.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CmsBackend.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

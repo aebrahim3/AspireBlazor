@@ -22,6 +22,9 @@ builder
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+// Register HttpClient factory for AI grammar check service.
+builder.Services.AddHttpClient();
+
 // after builder.Services.AddControllersWithViews();
 builder.Services.AddCors(options =>
 {
