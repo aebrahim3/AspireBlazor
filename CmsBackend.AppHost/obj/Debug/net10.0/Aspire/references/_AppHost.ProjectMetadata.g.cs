@@ -17,5 +17,5 @@ public class CmsBackend_AppHost
     /// <summary>
     /// The path to the Aspire Host project.
     /// </summary>
-    public static string ProjectPath => """C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.AppHost""";
+    public static string ProjectPath => """/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.AppHost""";
 }

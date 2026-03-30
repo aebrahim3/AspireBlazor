@@ -15,7 +15,7 @@ public class CmsBackend_Web : global::Aspire.Hosting.IProjectMetadata
     /// <summary>
     /// The path to the CmsBackend_Web project.
     /// </summary>
-    public string ProjectPath => """C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.Web\CmsBackend.Web.csproj""";
+    public string ProjectPath => """/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/CmsBackend.Web.csproj""";
 
     /// <summary>
     /// Gets a value indicating whether building the project before running it should be suppressed.

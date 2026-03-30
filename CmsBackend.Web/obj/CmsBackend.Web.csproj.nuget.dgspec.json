@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.Web\\CmsBackend.Web.csproj": {}
+    "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/CmsBackend.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.Web\\CmsBackend.Web.csproj": {
+    "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/CmsBackend.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.Web\\CmsBackend.Web.csproj",
+        "projectUniqueName": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/CmsBackend.Web.csproj",
         "projectName": "CmsBackend.Web",
-        "projectPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.Web\\CmsBackend.Web.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.Web\\obj\\",
+        "projectPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/CmsBackend.Web.csproj",
+        "packagesPath": "/Users/abdullahd08/.nuget/packages/",
+        "outputPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/abdullahd08/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -47,7 +47,7 @@
             "Microsoft.AspNetCore.App.Internal.Assets": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.5, )",
+              "version": "[10.0.2, )",
               "autoReferenced": true
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
@@ -61,7 +61,7 @@
             },
             "Microsoft.DotNet.HotReload.WebAssembly.Browser": {
               "target": "Package",
-              "version": "[10.0.201, )",
+              "version": "[10.0.102, )",
               "autoReferenced": true
             },
             "Microsoft.Extensions.Http": {
@@ -75,13 +75,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.5, )",
+              "version": "[10.0.2, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.5, )",
+              "version": "[10.0.3, )",
               "autoReferenced": true
             }
           },
@@ -98,8 +98,12 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[10.0.3, 10.0.3]"
+            },
+            {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[10.0.5, 10.0.5]"
+              "version": "[10.0.3, 10.0.3]"
             }
           ],
           "frameworkReferences": {
@@ -107,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

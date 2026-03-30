@@ -1,6 +1,7 @@
 using CmsBackend.Data;
 using CmsBackend.Models;
 using Ganss.Xss;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,9 +13,14 @@ namespace CmsBackend.Controllers;
 public class ArticlesApiController : ControllerBase
 {
     private readonly ApplicationDbContext _db;
+    private readonly UserManager<IdentityUser> _userManager;
     private readonly HtmlSanitizer _sanitizer = new HtmlSanitizer();
 
-    public ArticlesApiController(ApplicationDbContext db) => _db = db;
+    public ArticlesApiController(ApplicationDbContext db, UserManager<IdentityUser> userManager)
+    {
+        _db = db;
+        _userManager = userManager;
+    }
 
     // Retrieve all articles sorted by most recent first.
     [HttpGet]
@@ -34,6 +40,11 @@ public class ArticlesApiController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Article>> Create([FromBody] Article input)
     {
+        // Validate that the AuthorId corresponds to an existing user.
+        var author = await _userManager.FindByIdAsync(input.AuthorId);
+        if (author is null)
+            return BadRequest(new { error = "The specified AuthorId does not match any existing user." });
+
         input.Id = 0;
         // Sanitize HTML to prevent XSS attacks.
         input.ContentHtml = _sanitizer.Sanitize(input.ContentHtml);
@@ -53,6 +64,11 @@ public class ArticlesApiController : ControllerBase
         var a = await _db.Articles.FindAsync(id);
         // Return 404 if article doesn't exist.
         if (a is null) return NotFound();
+
+        // Validate that the AuthorId corresponds to an existing user.
+        var author = await _userManager.FindByIdAsync(input.AuthorId);
+        if (author is null)
+            return BadRequest(new { error = "The specified AuthorId does not match any existing user." });
 
         a.Title = input.Title;
         // Sanitize HTML to prevent XSS attacks.

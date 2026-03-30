@@ -17,37 +17,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = CmsBackend.Web
 build_property.RootNamespace = CmsBackend.Web
-build_property.ProjectDir = C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.Web\
+build_property.ProjectDir = /Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\User\BCIT\4870\CmsBackend\CmsBackend.Web
+build_property.MSBuildProjectDirectory = /Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/User/BCIT/4870/CmsBackend/CmsBackend.Web/App.razor]
+[/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/BCIT/4870/CmsBackend/CmsBackend.Web/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+[/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/BCIT/4870/CmsBackend/CmsBackend.Web/Pages/NotFound.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90Rm91bmQucmF6b3I=
+[/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/Pages/NotFound.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTm90Rm91bmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/BCIT/4870/CmsBackend/CmsBackend.Web/_Imports.razor]
+[/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/BCIT/4870/CmsBackend/CmsBackend.Web/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-vysb33stuo
+[/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0L01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6dd5w45gr9
 
-[C:/Users/User/BCIT/4870/CmsBackend/CmsBackend.Web/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-umifvo2n8i
+[/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.Web/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0L05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-95tzrd8la3

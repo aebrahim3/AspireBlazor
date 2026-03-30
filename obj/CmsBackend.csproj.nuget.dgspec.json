@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.csproj": {}
+    "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.csproj": {
+    "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.csproj",
+        "projectUniqueName": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.csproj",
         "projectName": "CmsBackend",
-        "projectPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\obj\\",
+        "projectPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.csproj",
+        "packagesPath": "/Users/abdullahd08/.nuget/packages/",
+        "outputPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/abdullahd08/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -26,8 +26,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.ServiceDefaults\\CmsBackend.ServiceDefaults.csproj": {
-                "projectPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.ServiceDefaults\\CmsBackend.ServiceDefaults.csproj"
+              "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.ServiceDefaults/CmsBackend.ServiceDefaults.csproj": {
+                "projectPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.ServiceDefaults/CmsBackend.ServiceDefaults.csproj"
               }
             }
           }
@@ -42,7 +42,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -108,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -526,17 +526,17 @@
         }
       }
     },
-    "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.ServiceDefaults\\CmsBackend.ServiceDefaults.csproj": {
+    "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.ServiceDefaults/CmsBackend.ServiceDefaults.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.ServiceDefaults\\CmsBackend.ServiceDefaults.csproj",
+        "projectUniqueName": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.ServiceDefaults/CmsBackend.ServiceDefaults.csproj",
         "projectName": "CmsBackend.ServiceDefaults",
-        "projectPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.ServiceDefaults\\CmsBackend.ServiceDefaults.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\BCIT\\4870\\CmsBackend\\CmsBackend.ServiceDefaults\\obj\\",
+        "projectPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.ServiceDefaults/CmsBackend.ServiceDefaults.csproj",
+        "packagesPath": "/Users/abdullahd08/.nuget/packages/",
+        "outputPath": "/Users/abdullahd08/bcit/4870/AspireBlazor/CmsBackend.ServiceDefaults/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/abdullahd08/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -560,7 +560,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -614,7 +614,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
